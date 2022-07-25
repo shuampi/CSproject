@@ -69,7 +69,7 @@ class Manager : Staff
     {
         return $" manager hourly rate = {managerHourlyRate}, allowance = {Allowance} ";
     }
-
+   
 }
 
 class Admin : Staff
@@ -78,4 +78,7 @@ class Admin : Staff
     private const float adminHourlyRate = 30F;
 
     public float Overtime { get; private set; }
+
+    public Admin(string name) : base(name, adminHourlyRate)
+    {}
 }
