@@ -81,4 +81,14 @@ class Admin : Staff
 
     public Admin(string name) : base(name, adminHourlyRate)
     {}
+
+    public override void CalculatePay()
+    {
+        base.CalculatePay();
+        if (HoursWorked > 160)
+        {
+            Overtime = overtimeRate * (HoursWorked - 160);
+            TotalPay = BasicPay + Overtime;
+        }
+    }
 }
