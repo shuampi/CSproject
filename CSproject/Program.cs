@@ -42,7 +42,8 @@ class Staff
     }
     public override string ToString()
     {
-        
+        return $"Name of staff = {NameOfStaff}, hourly rate = {hourlyRate}, hours worked = {hWorked}," +
+            $" Basic pay = {BasicPay}, Total pay = {TotalPay}";
     }
 }
 
