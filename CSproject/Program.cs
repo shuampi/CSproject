@@ -32,5 +32,17 @@ class Staff
         NameOfStaff = name;
         hourlyRate = rate;
     }
+
+    //methods
+    public void CalculatePay()
+    {
+        Console.WriteLine("Calculating pay...");
+        BasicPay = hWorked * hourlyRate;
+        TotalPay = BasicPay;
+    }
+    public override string ToString()
+    {
+        
+    }
 }
 
