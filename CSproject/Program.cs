@@ -91,4 +91,8 @@ class Admin : Staff
             TotalPay = BasicPay + Overtime;
         }
     }
+    public override string ToString()
+    {
+        return $"overtime rate = {overtimeRate}, admin hourly rate = {adminHourlyRate}, overtime = {Overtime}";
+    }
 }
