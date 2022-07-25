@@ -53,6 +53,8 @@ class Manager : Staff
 
     public int Allowance { get; private set; }
 
+    public Manager (string name) : base (name, managerHourlyRate)
+    {}
 
 }
 
