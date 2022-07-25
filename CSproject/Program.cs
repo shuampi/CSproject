@@ -64,6 +64,10 @@ class Manager : Staff
             TotalPay = BasicPay + 1000;
         }
     }
+    public override string ToString()
+    {
+        return $" manager hourly rate = {managerHourlyRate}, allowance = {Allowance} ";
+    }
 
 }
 
