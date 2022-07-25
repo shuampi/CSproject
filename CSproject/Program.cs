@@ -56,6 +56,15 @@ class Manager : Staff
     public Manager (string name) : base (name, managerHourlyRate)
     {}
 
+    public override void CalculatePay()
+    {
+        base.CalculatePay();
+        if(HoursWorked > 160)
+        {
+            TotalPay = BasicPay + 1000;
+        }
+    }
+
 }
 
 
