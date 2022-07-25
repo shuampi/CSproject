@@ -59,6 +59,7 @@ class Manager : Staff
     public override void CalculatePay()
     {
         base.CalculatePay();
+        Allowance = 1000;
         if(HoursWorked > 160)
         {
             TotalPay = BasicPay + 1000;
@@ -71,4 +72,10 @@ class Manager : Staff
 
 }
 
+class Admin : Staff
+{
+    private const float overtimeRate = 15.5F;
+    private const float adminHourlyRate = 30F;
 
+    public float Overtime { get; private set; }
+}
