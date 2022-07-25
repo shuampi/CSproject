@@ -34,7 +34,7 @@ class Staff
     }
 
     //methods
-    public void CalculatePay()
+    public virtual void CalculatePay()
     {
         Console.WriteLine("Calculating pay...");
         BasicPay = hWorked * hourlyRate;
@@ -46,4 +46,14 @@ class Staff
             $" Basic pay = {BasicPay}, Total pay = {TotalPay}";
     }
 }
+
+class Manager : Staff
+{
+    private const float managerHourlyRate = 50;
+
+    public int Allowance { get; private set; }
+
+
+}
+
 
